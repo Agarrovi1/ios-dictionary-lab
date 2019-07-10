@@ -550,34 +550,12 @@ print(withoutDuplicate)
 //b
 var unique: [Int] = []
 for a in arr1 {
-for b in arr2 {
-for c in arr3 {
-for d in arr4 {
-if arr3.contains(d) && arr2.contains(d) && arr1.contains(d) {
-if !unique.contains(d) {
-unique.append(d)
-}
-}
-}
-if arr4.contains(c) && arr2.contains(c) && arr1.contains(c) {
-if !unique.contains(c) {
-unique.append(c)
-}
-}
-}
-if arr3.contains(b) && arr4.contains(b) && arr1.contains(b) {
-if !unique.contains(b) {
-unique.append(b)
-}
-}
-}
 if arr3.contains(a) && arr2.contains(a) && arr4.contains(a) {
 if !unique.contains(a) {
 unique.append(a)
 }
 }
 }
-print(unique.sorted())
 ```
 
 
