@@ -361,22 +361,34 @@ Print the most common letter in the string below:
 ```swift
 var alphabet = "abcdefghijklmnopqrstuvwxyz"
 var count = 0
-var highest = 0
-var common = ""
+
+var alphabetArray:[Character] = []
 for a in alphabet {
+alphabetArray.append(a)
+}
+
+var countingLetters: [Int] = []
+for a in alphabetArray {
 for b in myString {
 if a == b {
 count += 1
 }
 }
-if count > highest {
-common = "\(a)"
-highest = count
+countingLetters.append(count)
 count = 0
 }
-}
-print(common)
 
+var frequencyDict: [Character:Int] = [:]
+for a in 0...25 {
+frequencyDict[alphabetArray[a]] = countingLetters[a]
+}
+
+for (a, b) in frequencyDict {
+let max = countingLetters.max()
+if b == max {
+print(a)
+}
+}
 ```
 
 ## Question 9
